@@ -16,7 +16,7 @@ EXPOSE 80
 
 # Environment Variables
 ENV NAME World
-ENV test test
+ENV TEST test
 
 # Define our command to be run when launching the container
 CMD ["python", "app.py"]
