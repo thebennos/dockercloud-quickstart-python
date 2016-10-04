@@ -7,7 +7,7 @@ import socket
 redis = Redis(host="redis", db=0)
 
 app = Flask(__name__)
-test = name=os.getenv('test', "test")
+test = os.getenv('test', "test")
 
 @app.route("/")
 def hello():
