@@ -7,7 +7,11 @@ import socket
 redis = Redis(host="redis", db=0)
 
 app = Flask(__name__)
-test = os.getenv('test', "test")
+try:  
+   os.environ["TEST"]
+except KeyError: 
+   print ("Please set the environment variable TEST")
+   sys.exit(1)
 
 @app.route("/")
 def hello():
